@@ -1,0 +1,5 @@
+﻿  DirectX12Testing.cpp
+  DX12Setup.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(10,23): warning C4018:  '<': signed/unsigned mismatch
+  Generating Code...
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(37,36): error C2276:  '&': illegal operation on bound member function expression
