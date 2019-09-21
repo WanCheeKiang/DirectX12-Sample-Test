@@ -155,7 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DirectX12Testing.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="DX12Setup.cpp" />
   </ItemGroup>
   <ItemGroup>

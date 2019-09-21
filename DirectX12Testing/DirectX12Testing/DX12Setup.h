@@ -2,6 +2,7 @@
 
 #define WIN32_LEAN_AND_MEAN
 #include <Windows.h>
+#include <algorithm>
 #include <shellapi.h> // For CommandLineToArgvW
 
 // The min/max macros conflict with like-named member functions.
@@ -33,9 +34,13 @@ using namespace Microsoft::WRL;
 // D3D12 extension library.
 #include "d3dx12.h"
 
+#include"DX12Helpers.h"
+
 class DX12Setup
 {
+
 	//DirectX 12 Setup
+public:
 	// The number of swap chain back buffers.
 	static const uint8_t g_NumFrames = 3;
 	// Use WARP adapter
@@ -43,7 +48,7 @@ class DX12Setup
 	//window width and height
 	uint32_t g_ClientWidth = 1280;
 	uint32_t g_ClientHeight = 720;
-
+private:
 	// Set to true once the DX12 objects have been initialized.
 	bool g_IsInitialized = false;
 
@@ -77,9 +82,9 @@ class DX12Setup
 	// Can be toggled with the Alt+Enter or F11
 	bool g_Fullscreen = false;
 
-	// Window callback function.
-	LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
-
-	void ParseCommandLineArguments();
-	void RegisterWindowClass(HINSTANCE hInst, const wchar_t* windowClassName);
+public:
+	static DX12Setup* GetSetup();
+	HWND CreateWindow(const wchar_t* windowClassName, HINSTANCE hInst,
+		const wchar_t* windowTitle, uint32_t width, uint32_t height);
+	ComPtr<IDXGIAdapter4> GetAdapter(bool useWarp);
 };

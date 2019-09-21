@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DirectX12Testing.cpp">
+    <ClCompile Include="DX12Setup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DX12Setup.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

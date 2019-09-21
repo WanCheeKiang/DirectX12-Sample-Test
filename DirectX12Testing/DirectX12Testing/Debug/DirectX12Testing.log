@@ -1,5 +1,7 @@
-﻿  DirectX12Testing.cpp
-  DX12Setup.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(10,23): warning C4018:  '<': signed/unsigned mismatch
+﻿  DX12Setup.cpp
+  main.cpp
   Generating Code...
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(37,36): error C2276:  '&': illegal operation on bound member function expression
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(38,23): warning C4018:  '<': signed/unsigned mismatch
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(38,23): warning C4018: C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(6) : warning C4172: returning address of local variable or temporary: dx12Setup
+main.obj : error LNK2019: unresolved external symbol "long __stdcall WndProc(struct HWND__ *,unsigned int,unsigned int,long)" (?WndProc@@YGJPAUHWND__@@IIJ@Z) referenced in function "void __cdecl RegisterWindowClass(struct HINSTANCE__ *,wchar_t const *)" (?RegisterWindowClass@@YAXPAUHINSTANCE__@@PB_W@Z)
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe : fatal error LNK1120: 1 unresolved externals
