@@ -5,7 +5,10 @@
 #include"DX12Setup.h"
 
 // Window callback function.
-LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM);
+LRESULT CALLBACK WndProc(HWND, UINT, WPARAM, LPARAM)
+{
+	return LRESULT();
+}
 
 void RegisterWindowClass(HINSTANCE hInst, const wchar_t* windowClassName)
 {
@@ -39,15 +42,15 @@ void ParseCommandLineArguments()
 	{
 		if (::wcscmp(argv[i], L"-w") == 0 || ::wcscmp(argv[i], L"--width") == 0)
 		{
-			DX12Setup::GetSetup()->g_ClientWidth = ::wcstol(argv[++i], nullptr, 10);
+			DX12Setup::GetSetup()->m_ClientWidth = ::wcstol(argv[++i], nullptr, 10);
 		}
 		if (::wcscmp(argv[i], L"-h") == 0 || ::wcscmp(argv[i], L"--height") == 0)
 		{
-			DX12Setup::GetSetup()->g_ClientHeight = ::wcstol(argv[++i], nullptr, 10);
+			DX12Setup::GetSetup()->m_ClientHeight = ::wcstol(argv[++i], nullptr, 10);
 		}
 		if (::wcscmp(argv[i], L"-warp") == 0 || ::wcscmp(argv[i], L"--warp") == 0)
 		{
-			DX12Setup::GetSetup()->g_UseWarp = true;
+			DX12Setup::GetSetup()->m_UseWarp = true;
 		}
 	}
 
@@ -70,6 +73,11 @@ void EnableDebugLayer()
 int main()
 {
 	std::cout << "Hello World!\n";
+}
+
+int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdLine, int nCmdShow)
+{
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
