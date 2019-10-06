@@ -1,6 +1,3 @@
-﻿  DX12Setup.cpp
-  main.cpp
-  Generating Code...
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(41,23): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(41,23): warning C4018: C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\DX12Setup.cpp(6) : warning C4172: returning address of local variable or temporary: dx12Setup
+﻿  main.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(103,23): warning C4018:  '<': signed/unsigned mismatch
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe

@@ -49,7 +49,7 @@ public:
 	//window width and height
 	uint32_t m_ClientWidth = 1280;
 	uint32_t m_ClientHeight = 720;
-private:
+
 	// Set to true once the DX12 objects have been initialized.
 	bool m_IsInitialized = false;
 
@@ -109,5 +109,6 @@ public:
 		std::chrono::milliseconds duration = std::chrono::milliseconds::max());
 	void Flush(ComPtr<ID3D12CommandQueue> commandQueue, ComPtr<ID3D12Fence> fence,
 		uint64_t& fenceValue, HANDLE fenceEvent);
+
 
 };

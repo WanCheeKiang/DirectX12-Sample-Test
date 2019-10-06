@@ -157,11 +157,13 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DX12Setup.cpp" />
+    <ClCompile Include="Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="d3dx12.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />
+    <ClInclude Include="Renderer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
