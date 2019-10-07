@@ -57,20 +57,21 @@ public:
 	HWND m_hWnd;
 	// Window rectangle (used to toggle fullscreen state).
 	RECT m_WindowRect;
-
+private:
 	// DirectX 12 Objects
-	ComPtr<ID3D12Device2> m_Device;
-	ComPtr<ID3D12CommandQueue> m_CommandQueue;
-	ComPtr<IDXGISwapChain4> m_SwapChain;
-	ComPtr<ID3D12Resource> m_BackBuffers[m_NumFrames];
-	ComPtr<ID3D12GraphicsCommandList> m_CommandList;
-	ComPtr<ID3D12CommandAllocator> m_CommandAllocators[m_NumFrames];
-	ComPtr<ID3D12DescriptorHeap> m_RTVDescriptorHeap;
+	ComPtr<ID3D12Device2> m_Device = nullptr;
+public:
+	ComPtr<ID3D12CommandQueue> m_CommandQueue = nullptr;
+	ComPtr<IDXGISwapChain4> m_SwapChain = nullptr;
+	ComPtr<ID3D12Resource> m_BackBuffers[m_NumFrames] = {nullptr};
+	ComPtr<ID3D12GraphicsCommandList> m_CommandList = nullptr;
+	ComPtr<ID3D12CommandAllocator> m_CommandAllocators[m_NumFrames] = {nullptr};
+	ComPtr<ID3D12DescriptorHeap> m_RTVDescriptorHeap = nullptr;
 	UINT m_RTVDescriptorSize;
 	UINT m_CurrentBackBufferIndex;
 
 	// Synchronization objects
-	ComPtr<ID3D12Fence> m_Fence;
+	ComPtr<ID3D12Fence> m_Fence = nullptr;
 	uint64_t m_FenceValue = 0;
 	uint64_t m_FrameFenceValues[m_NumFrames] = {};
 	HANDLE m_FenceEvent;
@@ -109,6 +110,11 @@ public:
 		std::chrono::milliseconds duration = std::chrono::milliseconds::max());
 	void Flush(ComPtr<ID3D12CommandQueue> commandQueue, ComPtr<ID3D12Fence> fence,
 		uint64_t& fenceValue, HANDLE fenceEvent);
+
+	ComPtr<ID3D12Device2>& GetDevice(void) { return this->m_Device; }
+	const ComPtr<ID3D12Device2>& GetDevice(void) const { return this->m_Device; }
+
+	void SetDevice(ComPtr<ID3D12Device2> device) { m_Device = device; }
 
 
 };

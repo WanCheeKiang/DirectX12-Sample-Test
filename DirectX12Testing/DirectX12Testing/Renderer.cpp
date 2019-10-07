@@ -2,7 +2,7 @@
 
 DX12Renderer* DX12Renderer::GetRenderer()
 {
-	DX12Renderer renderer;
+	static DX12Renderer renderer;
 	return &renderer;
 }
 
@@ -103,7 +103,7 @@ void DX12Renderer::Resize(uint32_t width, uint32_t height)
 
 		m_dx12Setup->m_CurrentBackBufferIndex = m_dx12Setup->m_SwapChain->GetCurrentBackBufferIndex();
 
-		m_dx12Setup->UpdateRenderTargetViews(m_dx12Setup->m_Device, m_dx12Setup->m_SwapChain, m_dx12Setup->m_RTVDescriptorHeap);
+		m_dx12Setup->UpdateRenderTargetViews(m_dx12Setup->GetDevice(), m_dx12Setup->m_SwapChain, m_dx12Setup->m_RTVDescriptorHeap);
 	}
 
 }

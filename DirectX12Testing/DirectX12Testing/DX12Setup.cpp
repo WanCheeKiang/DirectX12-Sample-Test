@@ -2,7 +2,7 @@
 
 DX12Setup* DX12Setup::GetSetup()
 {
-	DX12Setup dx12Setup;
+	static DX12Setup dx12Setup;
 	return &dx12Setup;
 }
 

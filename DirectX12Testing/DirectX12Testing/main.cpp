@@ -132,10 +132,6 @@ void EnableDebugLayer()
 #endif
 }
 
-int main()
-{
-	std::cout << "Hello World!\n";
-}
 
 int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdLine, int nCmdShow)
 {
@@ -159,25 +155,29 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 	::GetWindowRect(g_dx12Setup->m_hWnd, &g_dx12Setup->m_WindowRect);
 	ComPtr<IDXGIAdapter4> dxgiAdapter4 = g_dx12Setup->GetAdapter(g_dx12Setup->m_UseWarp);
 
-	g_dx12Setup->m_Device = g_dx12Setup->CreateDevice(dxgiAdapter4);
+	//g_dx12Setup->GetDevice() = g_dx12Setup->CreateDevice(dxgiAdapter4);
+	g_dx12Setup->SetDevice(g_dx12Setup->CreateDevice(dxgiAdapter4));
 
-	g_dx12Setup->m_CommandQueue = g_dx12Setup->CreateCommandQueue(g_dx12Setup->m_Device, D3D12_COMMAND_LIST_TYPE_DIRECT);
+	g_dx12Setup->m_CommandQueue = g_dx12Setup->CreateCommandQueue(g_dx12Setup->GetDevice(), D3D12_COMMAND_LIST_TYPE_DIRECT);
 
 	g_dx12Setup->m_SwapChain = g_dx12Setup->CreateSwapChain(g_dx12Setup->m_hWnd, g_dx12Setup->m_CommandQueue,
 		g_dx12Setup->m_ClientWidth, g_dx12Setup->m_ClientHeight, g_dx12Setup->m_NumFrames);
 
 	g_dx12Setup->m_CurrentBackBufferIndex = g_dx12Setup->m_SwapChain->GetCurrentBackBufferIndex();
 
-	g_dx12Setup->m_RTVDescriptorHeap = g_dx12Setup->CreateDescriptorHeap(g_dx12Setup->m_Device, D3D12_DESCRIPTOR_HEAP_TYPE_RTV, g_dx12Setup->m_NumFrames);
-	g_dx12Setup->m_RTVDescriptorSize = g_dx12Setup->m_Device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
+	g_dx12Setup->m_RTVDescriptorHeap = g_dx12Setup->CreateDescriptorHeap(g_dx12Setup->GetDevice(), D3D12_DESCRIPTOR_HEAP_TYPE_RTV, g_dx12Setup->m_NumFrames);
+	g_dx12Setup->m_RTVDescriptorSize = g_dx12Setup->GetDevice()->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
 
-	g_dx12Setup->UpdateRenderTargetViews(g_dx12Setup->m_Device, g_dx12Setup->m_SwapChain, g_dx12Setup->m_RTVDescriptorHeap);
+	g_dx12Setup->UpdateRenderTargetViews(g_dx12Setup->GetDevice(), g_dx12Setup->m_SwapChain, g_dx12Setup->m_RTVDescriptorHeap);
 	for (int i = 0; i < g_dx12Setup->m_NumFrames; ++i)
 	{
-		g_dx12Setup->m_CommandAllocators[i] = g_dx12Setup->CreateCommandAllocator(g_dx12Setup->m_Device, D3D12_COMMAND_LIST_TYPE_DIRECT);
+		g_dx12Setup->m_CommandAllocators[i] = g_dx12Setup->CreateCommandAllocator(g_dx12Setup->GetDevice(), D3D12_COMMAND_LIST_TYPE_DIRECT);
 	}
-	g_dx12Setup->m_CommandList = g_dx12Setup->CreateCommandList(g_dx12Setup->m_Device,
+	g_dx12Setup->m_CommandList = g_dx12Setup->CreateCommandList(g_dx12Setup->GetDevice(),
 		g_dx12Setup->m_CommandAllocators[g_dx12Setup->m_CurrentBackBufferIndex], D3D12_COMMAND_LIST_TYPE_DIRECT);
+
+	g_dx12Setup->m_Fence = g_dx12Setup->CreateFence(g_dx12Setup->GetDevice());
+	g_dx12Setup->m_FenceEvent = g_dx12Setup->CreateEventHandle();
 	g_dx12Setup->m_IsInitialized = true;
 
 	::ShowWindow(g_dx12Setup->m_hWnd, SW_SHOW);
@@ -199,6 +199,11 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 
 	return 0;
 }
+
+//int main()
+//{
+//	std::cout << "Hello World!\n";
+//}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
