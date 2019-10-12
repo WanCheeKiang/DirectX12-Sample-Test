@@ -4,6 +4,7 @@
 #include <iostream>
 #include"DX12Setup.h"
 #include"Renderer.h"
+#include"KeyInput.h"
 
 DX12Setup* g_dx12Setup = DX12Setup::GetSetup();
 DX12Renderer* g_dx12Redner = DX12Renderer::GetRenderer();
@@ -41,9 +42,12 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 			}
 		}
 		break;
-		// The default window procedure will play a system notification sound 
-		// when pressing the Alt+Enter keyboard combination if this message is 
-		// not handled.
+		case WM_INPUT:
+			KeyInput::WinProc(message, wParam, lParam);
+			break;
+			// The default window procedure will play a system notification sound 
+			// when pressing the Alt+Enter keyboard combination if this message is 
+			// not handled.
 		case WM_SYSCHAR:
 			break;
 			{
@@ -135,12 +139,15 @@ void EnableDebugLayer()
 
 int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdLine, int nCmdShow)
 {
+	bool close = false;
 	// Windows 10 Creators update adds Per Monitor V2 DPI awareness context.
 	// Using this awareness context allows the client area of the window 
 	// to achieve 100% scaling while still allowing non-client window content to 
 	// be rendered in a DPI sensitive fashion.
 	SetThreadDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
 
+	//key input
+	KeyInput::Init();
 	// Window class name. Used for registering / creating the window.
 	const wchar_t* windowClassName = L"DX12WindowClass";
 	ParseCommandLineArguments();
@@ -182,15 +189,22 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 
 	::ShowWindow(g_dx12Setup->m_hWnd, SW_SHOW);
 
+
 	MSG msg = {};
+
+
 	while (msg.message != WM_QUIT)
 	{
+		KeyInput::Update();
+
 		if (::PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
 		{
 			::TranslateMessage(&msg);
 			::DispatchMessage(&msg);
 		}
 	}
+
+
 	// Make sure the command queue has finished all commands before closing.
 	g_dx12Setup->Flush(g_dx12Setup->m_CommandQueue, g_dx12Setup->m_Fence, g_dx12Setup->m_FenceValue, g_dx12Setup->m_FenceEvent);
 
