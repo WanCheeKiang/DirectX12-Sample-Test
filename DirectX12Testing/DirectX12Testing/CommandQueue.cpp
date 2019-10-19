@@ -77,9 +77,7 @@ uint64_t CommandQueue::ExecuteCommandList(Microsoft::WRL::ComPtr<ID3D12GraphicsC
 	UINT dataSize = sizeof(commandAllocator);
 	ThrowIfFailed(commandList->GetPrivateData(__uuidof(ID3D12CommandAllocator), &dataSize, &commandAllocator));
 
-	ID3D12CommandList* const ppCommandLists[] = {
-		commandList.Get()
-	};
+	ID3D12CommandList* const ppCommandLists[] = {commandList.Get()};
 
 	m_d3d12CommandQueue->ExecuteCommandLists(1, ppCommandLists);
 	uint64_t fenceValue = Signal();
@@ -111,6 +109,7 @@ void CommandQueue::WaitForFenceValue(uint64_t fenceValue)
 
 void CommandQueue::Flush()
 {
+
 }
 
 Microsoft::WRL::ComPtr<ID3D12CommandQueue> CommandQueue::GetD3D12CommandQueue() const

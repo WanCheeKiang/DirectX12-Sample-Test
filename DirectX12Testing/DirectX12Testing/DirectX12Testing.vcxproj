@@ -166,9 +166,11 @@
     <ClInclude Include="d3dx12.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />
+    <ClInclude Include="GameKeyInput.h" />
     <ClInclude Include="KeyInput.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RendererFunction.h" />
+    <ClInclude Include="ShaderSetup.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

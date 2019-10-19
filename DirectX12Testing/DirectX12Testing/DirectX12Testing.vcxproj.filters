@@ -53,5 +53,11 @@
     <ClInclude Include="KeyInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ShaderSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameKeyInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

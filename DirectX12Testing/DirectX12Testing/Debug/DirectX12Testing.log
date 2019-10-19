@@ -1,3 +1,2 @@
-﻿  main.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(107,23): warning C4018:  '<': signed/unsigned mismatch
+﻿  CommandQueue.cpp
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe
