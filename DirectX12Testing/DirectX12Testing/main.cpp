@@ -1,5 +1,6 @@
 // DirectX12Testing.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+//This project's tutorial is from  https://www.3dgep.com/, github:https://github.com/jpvanoosten/LearningDirectX12
+//This project code is NOT completely copying the tutorial
 #include<Windows.h>
 #include <iostream>
 #include"DX12Setup.h"

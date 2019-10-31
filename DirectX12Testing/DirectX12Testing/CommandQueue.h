@@ -33,7 +33,7 @@ protected:
 	Microsoft::WRL::ComPtr<ID3D12CommandAllocator> CreateCommandAllocator();
 	Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList2> CreateCommandList(Microsoft::WRL::ComPtr<ID3D12CommandAllocator> allocator);
 public:
-	CommandQueue(Microsoft::WRL::ComPtr<ID3D12Device2> device, D3D12_COMMAND_LIST_TYPE type);
+	CommandQueue(/*Microsoft::WRL::ComPtr<ID3D12Device2> device, */D3D12_COMMAND_LIST_TYPE type);
 	virtual ~CommandQueue();
 
 	// Get an available command list from the command queue.

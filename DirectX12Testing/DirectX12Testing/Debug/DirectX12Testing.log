@@ -1,2 +1,3 @@
-﻿  CommandQueue.cpp
+﻿  Application.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\Application.cpp(1,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe

@@ -1,9 +1,12 @@
 #pragma once
 #include<Windows.h>
 #include"KeyInput.h"
+#include"KeyEvents.h"
 #include <memory> // for std::enable_shared_from_this
 #include <string> // for std::wstring
-class Winodw;
+
+class Window;
+
 class GameKeyInput : public std::enable_shared_from_this<GameKeyInput>
 {
 public:
@@ -84,4 +87,13 @@ public:
      * Invoked when the registered window instance is destroyed.
      */
     virtual void OnWindowDestroy();
+
+	std::shared_ptr<Window> m_pWindow; 
+	//shared_ptr =  a smart pointer that retains shared ownership of an object through a pointer. Several shared_ptr objects may own the same object.
+
+private:
+	std::wstring m_Name;
+	int m_Width;
+	int m_Height;
+	bool m_vSync;
 };

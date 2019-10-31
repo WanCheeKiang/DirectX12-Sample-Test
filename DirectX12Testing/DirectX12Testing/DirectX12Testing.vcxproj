@@ -155,22 +155,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
+    <ClCompile Include="GameKeyInput.cpp" />
+    <ClCompile Include="HighResolutionClock.cpp" />
     <ClCompile Include="KeyInput.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DX12Setup.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="RendererFunction.cpp" />
+    <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Application.h" />
     <ClInclude Include="CommandQueue.h" />
     <ClInclude Include="d3dx12.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />
     <ClInclude Include="GameKeyInput.h" />
+    <ClInclude Include="HighResolutionClock.h" />
+    <ClInclude Include="KeyEvents.h" />
     <ClInclude Include="KeyInput.h" />
+    <ClInclude Include="MathLibrary.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RendererFunction.h" />
     <ClInclude Include="ShaderSetup.h" />
+    <ClInclude Include="DataType.h" />
+    <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
