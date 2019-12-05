@@ -11,6 +11,7 @@ using namespace Microsoft::WRL;
 
 #include <cassert>
 #include <map>
+#include<WinUser.h>
 
 constexpr wchar_t WINDOW_CLASS_NAME[] = L"DX12RenderWindowClass";
 

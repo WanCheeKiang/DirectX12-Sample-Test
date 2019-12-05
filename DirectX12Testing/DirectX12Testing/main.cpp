@@ -37,7 +37,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 				if (alt)
 				{
 			case VK_F11:
+					//if(KeyInput::GetKeyState(KeyCode::F) == KeyState::Down)
 				g_dx12Redner->SetFullScreen(!g_dx12Setup->m_Fullscreen);
+			
 				}
 				break;
 			}
