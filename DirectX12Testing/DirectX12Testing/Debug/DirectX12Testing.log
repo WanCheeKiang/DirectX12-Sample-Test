@@ -8,7 +8,7 @@ C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12
   DX12Setup.cpp
   Renderer.cpp
   RendererFunction.cpp
+  Window.cpp
   Generating Code...
 C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(110,23): warning C4018:  '<': signed/unsigned mismatch
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(110,23): warning C4018: C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\KeyInput.cpp : fatal error C1090: PDB API call failed, error code '3': C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\Debug\vc142.pdb
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(429,5): error MSB6006: "CL.exe" exited with code 1.
+  DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe
