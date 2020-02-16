@@ -1,14 +1,2 @@
-﻿  Application.cpp
-  CommandQueue.cpp
-  GameKeyInput.cpp
-  HighResolutionClock.cpp
-  KeyInput.cpp
-  main.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\Application.cpp(1,10): warning C4067:  unexpected tokens following preprocessor directive - expected a newline
-  DX12Setup.cpp
-  Renderer.cpp
-  RendererFunction.cpp
-  Window.cpp
-  Generating Code...
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(110,23): warning C4018:  '<': signed/unsigned mismatch
+﻿  RendererFunction.cpp
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe
