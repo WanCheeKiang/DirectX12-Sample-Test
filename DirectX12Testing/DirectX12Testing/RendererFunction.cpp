@@ -42,7 +42,9 @@ void RednererFunction::ClearRTV(Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList
 
 void RednererFunction::ClearDepth(Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList2> commandList, D3D12_CPU_DESCRIPTOR_HANDLE dsv, FLOAT depth)
 {
+	commandList->ClearDepthStencilView(dsv, D3D12_CLEAR_FLAG_DEPTH, depth, 0, 0, nullptr);
 }
+
 void RednererFunction::UpdateBufferResource(
 	ComPtr<ID3D12GraphicsCommandList2> commandList,
 	ID3D12Resource** pDestinationResource,
