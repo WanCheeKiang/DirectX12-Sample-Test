@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
+    <ClCompile Include="DataType\Vertex.cpp" />
     <ClCompile Include="GameKeyInput.cpp" />
     <ClCompile Include="HighResolutionClock.cpp" />
     <ClCompile Include="KeyInput.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RendererFunction.cpp" />
     <ClCompile Include="Window.cpp" />
+    <ClCompile Include="XTime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
@@ -180,6 +182,7 @@
     <ClInclude Include="HighResolutionClock.h" />
     <ClInclude Include="KeyEvents.h" />
     <ClInclude Include="KeyInput.h" />
+    <ClInclude Include="MathLibrary\Camera.h" />
     <ClInclude Include="MathLibrary\ColorConstants.h" />
     <ClInclude Include="MathLibrary\MathConstants.h" />
     <ClInclude Include="MathLibrary\MathLibrary.h" />
@@ -190,6 +193,7 @@
     <ClInclude Include="RendererFunction.h" />
     <ClInclude Include="ShaderSetup.h" />
     <ClInclude Include="Window.h" />
+    <ClInclude Include="XTime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

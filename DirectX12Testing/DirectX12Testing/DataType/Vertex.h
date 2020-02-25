@@ -12,7 +12,7 @@ namespace Vertex
 		DirectX::XMFLOAT3 m_tangent;
 		DirectX::XMFLOAT3 m_binormal;
 
-		BaseVertex();
+		BaseVertex() = default;
 		BaseVertex(DirectX::XMFLOAT3 pos, DirectX::XMFLOAT4 color);
         inline bool operator==(const BaseVertex& rhs) const
         {

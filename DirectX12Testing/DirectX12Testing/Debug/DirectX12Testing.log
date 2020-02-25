@@ -1,8 +1,2 @@
-﻿  MathLibrary.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  Transform.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  Generating Code...
+﻿  XTime.cpp
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe

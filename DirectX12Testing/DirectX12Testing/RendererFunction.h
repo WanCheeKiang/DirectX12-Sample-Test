@@ -62,5 +62,4 @@ public:
 	void ResizeDepthBuffer(int width, int height);
 
 
-
 };
