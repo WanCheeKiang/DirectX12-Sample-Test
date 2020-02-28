@@ -1,7 +1,5 @@
-#ifndef PCH_H
-#define PCH_H
+#pragma once 
 
-// TODO: add headers that you want to pre-compile here
 #include<stdint.h>
 #include<fstream>
 #include<iostream>
@@ -11,5 +9,4 @@
 #include<fbxsdk.h>
 #include<vector>
 #include <array>
-#endif //PCH_H
 
