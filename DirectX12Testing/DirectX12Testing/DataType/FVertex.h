@@ -1,9 +1,9 @@
 #pragma once
 #include<DirectXMath.h>
 #include"..//MathLibrary/MathConstants.h"
-namespace Vertex
+namespace FVertex
 {
-	struct BaseVertex
+	struct Vertex
 	{
 		DirectX::XMFLOAT3 m_position;
 		DirectX::XMFLOAT4 m_color;
@@ -12,11 +12,11 @@ namespace Vertex
 		DirectX::XMFLOAT3 m_tangent;
 		DirectX::XMFLOAT3 m_binormal;
 
-		BaseVertex() = default;
-		BaseVertex(DirectX::XMFLOAT3 pos, DirectX::XMFLOAT4 color);
-        inline bool operator==(const BaseVertex& rhs) const
+		Vertex() = default;
+		Vertex(DirectX::XMFLOAT3 pos, DirectX::XMFLOAT4 color);
+        inline bool operator==(const Vertex& rhs) const
         {
-            const BaseVertex& lhs = *this;
+            const Vertex& lhs = *this;
 
             bool output = (fabsf(lhs.m_position.x - rhs.m_position.x) < MathConstants::kEpsilon) &&
                 (fabsf(lhs.m_position.y - rhs.m_position.y) < MathConstants::kEpsilon) &&

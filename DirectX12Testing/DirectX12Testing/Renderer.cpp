@@ -75,6 +75,9 @@ void DX12Renderer::Render()
 
 		m_dx12Setup->WaitForFenceValue(m_dx12Setup->m_Fence, m_dx12Setup->m_FrameFenceValues[m_dx12Setup->m_CurrentBackBufferIndex], m_dx12Setup->m_FenceEvent);
 	}
+
+
+
 }
 
 void DX12Renderer::Resize(uint32_t width, uint32_t height)

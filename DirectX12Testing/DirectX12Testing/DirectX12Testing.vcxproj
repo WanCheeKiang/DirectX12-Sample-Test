@@ -157,7 +157,8 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
-    <ClCompile Include="DataType\Vertex.cpp" />
+    <ClCompile Include="DataType\FVertex.cpp" />
+    <ClCompile Include="File Reader\ModelFileImporter.cpp" />
     <ClCompile Include="GameKeyInput.cpp" />
     <ClCompile Include="HighResolutionClock.cpp" />
     <ClCompile Include="KeyInput.cpp" />
@@ -175,9 +176,11 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="CommandQueue.h" />
     <ClInclude Include="d3dx12.h" />
-    <ClInclude Include="DataType\Vertex.h" />
+    <ClInclude Include="DataType\FVertex.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />
+    <ClInclude Include="File Reader\ModelFileImporter.h" />
+    <ClInclude Include="HeaderIncludes.h" />
     <ClInclude Include="GameKeyInput.h" />
     <ClInclude Include="HighResolutionClock.h" />
     <ClInclude Include="KeyEvents.h" />

@@ -36,7 +36,7 @@ class RednererFunction
 	DirectX::XMMATRIX m_ProjectionMatrix;
 
 	bool m_ContentLoaded;
-
+	Window* m_wnd;
 public:
 	// Helper functions
 	// Transition a resource
@@ -60,6 +60,7 @@ public:
 
 	// Resize the depth buffer to match the size of the client area.
 	void ResizeDepthBuffer(int width, int height);
+
 
 
 };

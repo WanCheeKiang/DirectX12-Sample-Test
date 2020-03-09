@@ -1,2 +1,5 @@
-﻿  XTime.cpp
+﻿  FVertex.cpp
+  ModelFileImporter.cpp
+  RendererFunction.cpp
+  Generating Code...
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe
