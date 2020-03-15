@@ -176,6 +176,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="CommandQueue.h" />
     <ClInclude Include="d3dx12.h" />
+    <ClInclude Include="DataType\Camera.h" />
     <ClInclude Include="DataType\FVertex.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />

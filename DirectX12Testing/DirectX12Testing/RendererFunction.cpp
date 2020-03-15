@@ -121,4 +121,9 @@ void RednererFunction::ResizeDepthBuffer(int width, int height)
 	}
 }
 
+void RednererFunction::OnUpdate(UpdateEventArgs& e)
+{
+
+}
+
 

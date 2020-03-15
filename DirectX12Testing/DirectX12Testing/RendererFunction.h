@@ -61,6 +61,8 @@ public:
 	// Resize the depth buffer to match the size of the client area.
 	void ResizeDepthBuffer(int width, int height);
 
+	//temp function for update , will change it after
+	void OnUpdate(UpdateEventArgs& e);
 
 
 };
