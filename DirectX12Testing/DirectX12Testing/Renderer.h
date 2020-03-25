@@ -1,8 +1,12 @@
 #pragma once
 #include"DX12Setup.h"
+#include"MathLibrary/MathLibrary.h"
+
 class DX12Renderer
 {
-	 DX12Setup* m_dx12Setup = DX12Setup::GetSetup();
+	DX12Setup* m_dx12Setup = DX12Setup::GetSetup();
+	DirectX::XMMATRIX viewMtx;
+	DirectX::XMMATRIX projMtx;
 public:
 	static DX12Renderer* GetRenderer();
 	//renderer function and update
