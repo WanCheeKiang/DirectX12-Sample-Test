@@ -64,5 +64,6 @@ public:
 	//temp function for update , will change it after
 	void OnUpdate(UpdateEventArgs& e);
 
+	HRESULT CreateRootSign(ID3D12Device2* device);
 
 };

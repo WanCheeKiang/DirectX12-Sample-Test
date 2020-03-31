@@ -23,8 +23,8 @@ void DX12Renderer::Update()
 	{
 		char buffer[500];
 		auto fps = frameCounter / elapsedSeconds;
-		sprintf_s(buffer, 500, "FPS: %f\n", fps);
-		OutputDebugString((LPCWSTR)buffer);
+		sprintf_s(buffer, 500, "FPS: %f\n", fps); // causing corrupted string 
+		OutputDebugStringA(/*(LPCWSTR)*/buffer);
 
 		frameCounter = 0;
 		elapsedSeconds = 0.0;

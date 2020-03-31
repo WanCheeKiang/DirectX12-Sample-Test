@@ -1,5 +1,10 @@
-﻿  FVertex.cpp
-  ModelFileImporter.cpp
+﻿  Renderer.cpp
+C:\Users\User\Documents\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\User\Documents\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
   RendererFunction.cpp
+C:\Users\User\Documents\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\RendererFunction.cpp(144,97): error C2065: 'rootSignature': undeclared identifier
+C:\Users\User\Documents\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\RendererFunction.cpp(144,125): error C2660: 'ID3D12Device::CreateRootSignature': function does not take 3 arguments
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\d3d12.h(7867,43): message : see declaration of 'ID3D12Device::CreateRootSignature'
+  main.cpp
+C:\Users\User\Documents\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\main.cpp(110,23): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
-  DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe
