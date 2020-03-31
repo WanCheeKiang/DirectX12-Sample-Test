@@ -6,6 +6,7 @@
 #include"Window.h"
 
 #include <wrl.h>
+#include <combaseapi.h>
 
 using namespace Microsoft::WRL;
 
@@ -109,7 +110,7 @@ void RednererFunction::ResizeDepthBuffer(int width, int height)
 			D3D12_RESOURCE_STATE_DEPTH_WRITE,
 			&optimizedClearValue,
 			IID_PPV_ARGS(&m_DepthBuffer)
-		));        // Update the depth-stencil view.
+			));        // Update the depth-stencil view.
 		D3D12_DEPTH_STENCIL_VIEW_DESC dsv = {};
 		dsv.Format = DXGI_FORMAT_D32_FLOAT;
 		dsv.ViewDimension = D3D12_DSV_DIMENSION_TEXTURE2D;
@@ -126,7 +127,7 @@ void RednererFunction::OnUpdate(UpdateEventArgs& e)
 
 }
 
-HRESULT RednererFunction::CreateRootSign(ID3D12Device2* device)
+HRESULT RednererFunction::CreateRootSign(ID3D12Device2* device, ID3D12RootSignature* rootSignature)
 {
 	HRESULT hr;
 	//dx11 blob > root signature in dx12, it is similar but is not the same  
