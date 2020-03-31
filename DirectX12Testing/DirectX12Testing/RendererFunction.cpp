@@ -126,4 +126,27 @@ void RednererFunction::OnUpdate(UpdateEventArgs& e)
 
 }
 
+HRESULT RednererFunction::CreateRootSign(ID3D12Device2* device)
+{
+	HRESULT hr;
+	//dx11 blob > root signature in dx12, it is similar but is not the same  
+// create root signature
+	CD3DX12_ROOT_SIGNATURE_DESC rootSignatureDesc;
+	rootSignatureDesc.Init(0, nullptr, 0, nullptr, D3D12_ROOT_SIGNATURE_FLAG_ALLOW_INPUT_ASSEMBLER_INPUT_LAYOUT);
+
+	ID3DBlob* signature;
+	hr = D3D12SerializeRootSignature(&rootSignatureDesc, D3D_ROOT_SIGNATURE_VERSION_1, &signature, nullptr);
+	if (FAILED(hr))
+	{
+		return false;
+	}
+
+	hr = device->CreateRootSignature(0, signature->GetBufferPointer(), signature->GetBufferSize(), IID_PPV_ARGS(&rootSignature));
+	if (FAILED(hr))
+	{
+		return false;
+	}
+	return hr;
+}
+
 
