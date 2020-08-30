@@ -162,6 +162,7 @@
     <ClCompile Include="GameKeyInput.cpp" />
     <ClCompile Include="HighResolutionClock.cpp" />
     <ClCompile Include="KeyInput.cpp" />
+    <ClCompile Include="LoadPipeline.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="DX12Setup.cpp" />
     <ClCompile Include="MathLibrary\MathLibrary.cpp" />
@@ -186,6 +187,7 @@
     <ClInclude Include="HighResolutionClock.h" />
     <ClInclude Include="KeyEvents.h" />
     <ClInclude Include="KeyInput.h" />
+    <ClInclude Include="LoadPipeline.h" />
     <ClInclude Include="MathLibrary\Camera.h" />
     <ClInclude Include="MathLibrary\ColorConstants.h" />
     <ClInclude Include="MathLibrary\MathConstants.h" />

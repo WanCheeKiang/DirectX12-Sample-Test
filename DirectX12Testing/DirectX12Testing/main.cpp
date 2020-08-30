@@ -3,14 +3,13 @@
 //This project code is NOT completely copying the tutorial
 #include<Windows.h>
 #include <iostream>
-#include"DX12Setup.h"
 #include"Renderer.h"
-#include"KeyInput.h"
-
+#include "LoadPipeline.h"
+#include "KeyInput.h"
 DX12Setup* g_dx12Setup = DX12Setup::GetSetup();
 DX12Renderer* g_dx12Redner = DX12Renderer::GetRenderer();
 // Window callback function.
-LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+/*LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	if (g_dx12Setup->m_IsInitialized)
 	{
@@ -137,7 +136,7 @@ void EnableDebugLayer()
 	ThrowIfFailed(D3D12GetDebugInterface(IID_PPV_ARGS(&debugInterface)));
 	debugInterface->EnableDebugLayer();
 #endif
-}
+}*/
 
 
 int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdLine, int nCmdShow)
@@ -151,6 +150,7 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 
 	//key input
 	KeyInput::Init();
+	/*
 	// Window class name. Used for registering / creating the window.
 	const wchar_t* windowClassName = L"DX12WindowClass";
 	ParseCommandLineArguments();
@@ -184,15 +184,17 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 		g_dx12Setup->m_CommandAllocators[i] = g_dx12Setup->CreateCommandAllocator(g_dx12Setup->GetDevice(), D3D12_COMMAND_LIST_TYPE_DIRECT);
 	}
 	g_dx12Setup->m_CommandList = g_dx12Setup->CreateCommandList(g_dx12Setup->GetDevice(),
-		g_dx12Setup->m_CommandAllocators[g_dx12Setup->m_CurrentBackBufferIndex], D3D12_COMMAND_LIST_TYPE_DIRECT);
+	g_dx12Setup->m_CommandAllocators[g_dx12Setup->m_CurrentBackBufferIndex], D3D12_COMMAND_LIST_TYPE_DIRECT);
 
 	g_dx12Setup->m_Fence = g_dx12Setup->CreateFence(g_dx12Setup->GetDevice());
 	g_dx12Setup->m_FenceEvent = g_dx12Setup->CreateEventHandle();
 	g_dx12Setup->m_IsInitialized = true;
 
 	::ShowWindow(g_dx12Setup->m_hWnd, SW_SHOW);
+	*/
 
-
+	LoadPipeline::Load(g_dx12Setup, hInstance);
+	
 	MSG msg = {};
 
 
@@ -217,10 +219,6 @@ int CALLBACK wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR lpCmdL
 	return 0;
 }
 
-//int main()
-//{
-//	std::cout << "Hello World!\n";
-//}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
