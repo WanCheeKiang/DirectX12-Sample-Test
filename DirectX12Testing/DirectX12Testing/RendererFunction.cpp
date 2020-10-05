@@ -139,15 +139,27 @@ HRESULT RednererFunction::CreateRootSign(ID3D12Device2* device, ID3D12RootSignat
 	hr = D3D12SerializeRootSignature(&rootSignatureDesc, D3D_ROOT_SIGNATURE_VERSION_1, &signature, nullptr);
 	if (FAILED(hr))
 	{
-		return false;
+		return hr;
 	}
 
 	hr = device->CreateRootSignature(0, signature->GetBufferPointer(), signature->GetBufferSize(), IID_PPV_ARGS(&rootSignature));
 	if (FAILED(hr))
 	{
-		return false;
+		return hr;
 	}
+
 	return hr;
 }
+
+void RednererFunction::SetCommandList(ID3D12Device2* device, DX12Setup* setup)
+{
+	setup = DX12Setup::GetSetup();
+	ThrowIfFailed(device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, setup->m_CommandAllocators->Get(), m_PipelineState.Get(), IID_PPV_ARGS(&setup->m_CommandList)));
+
+}
+
+
+
+
 
 

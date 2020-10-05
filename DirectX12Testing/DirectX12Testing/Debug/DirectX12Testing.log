@@ -1,5 +1,44 @@
-﻿  LoadPipeline.cpp
+﻿  Application.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\Application.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  CommandQueue.cpp
+  FVertex.cpp
+  ModelFileImporter.cpp
+  GameKeyInput.cpp
+  HighResolutionClock.cpp
+  KeyInput.cpp
+  LoadPipeline.cpp
 C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
 C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\LoadPipeline.cpp(80,23): warning C4018: '<': signed/unsigned mismatch
+  main.cpp
+  DX12Setup.cpp
+  MathLibrary.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Quaternion.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(24,28): warning C4244: 'return': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\Quaternion.cpp(122): message : see reference to function template instantiation 'T MathLibrary::Warprange<float>(T,T,T)' being compiled
+          with
+          [
+              T=float
+          ]
+  Transform.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Renderer.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  RendererFunction.cpp
+  ShaderSetup.cpp
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(110,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
+  Window.cpp
+  XTime.cpp
+  Generating Code...
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe

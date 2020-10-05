@@ -1,27 +1,29 @@
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\vc142.pdb
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\vc142.idb
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\xtime.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\window.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\rendererfunction.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\renderer.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\transform.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\quaternion.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\mathlibrary.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\dx12setup.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\main.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\keyinput.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\highresolutionclock.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\gamekeyinput.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\modelfileimporter.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\fvertex.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\commandqueue.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\application.obj
-c:\users\user\documents\directx12-sample-test\directx12testing\debug\directx12testing.exe
-c:\users\user\documents\directx12-sample-test\directx12testing\debug\directx12testing.ilk
-c:\users\user\documents\directx12-sample-test\directx12testing\debug\directx12testing.pdb
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.command.1.tlog
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.read.1.tlog
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.write.1.tlog
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.command.1.tlog
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.read.1.tlog
-c:\users\user\documents\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.write.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\vc142.pdb
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\vc142.idb
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\xtime.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\window.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\renderer.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\transform.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\quaternion.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\mathlibrary.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\dx12setup.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\main.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\loadpipeline.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\keyinput.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\highresolutionclock.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\gamekeyinput.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\modelfileimporter.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\fvertex.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\commandqueue.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\application.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\shadersetup.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\rendererfunction.obj
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\debug\directx12testing.ilk
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\debug\directx12testing.exe
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\debug\directx12testing.pdb
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.command.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.read.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\cl.write.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.command.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.read.1.tlog
+c:\users\kiang wan chee\desktop\directx12-sample-test\directx12testing\directx12testing\debug\directx12testing.tlog\link.write.1.tlog

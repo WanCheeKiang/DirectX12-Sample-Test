@@ -170,6 +170,7 @@
     <ClCompile Include="MathLibrary\Transform.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RendererFunction.cpp" />
+    <ClCompile Include="ShaderSetup.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="XTime.cpp" />
   </ItemGroup>

@@ -4,6 +4,7 @@
 class LoadPipeline
 {
 protected:
+	// Window callback function.
 	static LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 public:
 	 static void ParseCommandLineArguments();

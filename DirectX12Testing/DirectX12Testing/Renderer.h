@@ -11,7 +11,7 @@ class DX12Renderer
 	DirectX::XMMATRIX projMtx;
 	ID3D12PipelineState* m_pipelineStateObject; // pso containing a pipeline state
 
-	ID3D12RootSignature* m_; // root signature defines data shaders will access
+	ID3D12RootSignature* m_rootSignature; // root signature defines data shaders will access
 
 	D3D12_VIEWPORT m_viewport; // area that output from rasterizer will be stretched to.
 

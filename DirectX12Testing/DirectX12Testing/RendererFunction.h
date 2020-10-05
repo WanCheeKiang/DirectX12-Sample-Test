@@ -24,7 +24,7 @@ class RednererFunction
 	Microsoft::WRL::ComPtr<ID3D12RootSignature> m_RootSignature;
 
 	// Pipeline state object.
-	Microsoft::WRL::ComPtr<ID3D12PipelineState> m_PipelineState;
+	Microsoft::WRL::ComPtr<ID3D12PipelineState> m_PipelineState = nullptr;
 
 	D3D12_VIEWPORT m_Viewport;
 	D3D12_RECT m_ScissorRect;
@@ -65,5 +65,16 @@ public:
 	void OnUpdate(UpdateEventArgs& e);
 
 	HRESULT CreateRootSign(ID3D12Device2* device, ID3D12RootSignature* rootSignature);
+
+	Microsoft::WRL::ComPtr<ID3D12RootSignature> GetRootSignature()
+	{
+		return m_RootSignature;
+	}
+
+	Microsoft::WRL::ComPtr<ID3D12PipelineState> GetPipelineState()
+	{
+		return m_PipelineState;
+	}
+	void SetCommandList(ID3D12Device2* device, DX12Setup* setup);
 
 };
