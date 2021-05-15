@@ -158,6 +158,7 @@
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="CommandQueue.cpp" />
     <ClCompile Include="DataType\FVertex.cpp" />
+    <ClCompile Include="DDSTextureLoader12.cpp" />
     <ClCompile Include="File Reader\ModelFileImporter.cpp" />
     <ClCompile Include="GameKeyInput.cpp" />
     <ClCompile Include="HighResolutionClock.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RendererFunction.cpp" />
     <ClCompile Include="ShaderSetup.cpp" />
+    <ClCompile Include="TextureSetUp.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="XTime.cpp" />
   </ItemGroup>
@@ -180,6 +182,7 @@
     <ClInclude Include="d3dx12.h" />
     <ClInclude Include="DataType\Camera.h" />
     <ClInclude Include="DataType\FVertex.h" />
+    <ClInclude Include="DDSTextureLoader12.h" />
     <ClInclude Include="DX12Helpers.h" />
     <ClInclude Include="DX12Setup.h" />
     <ClInclude Include="File Reader\ModelFileImporter.h" />
@@ -199,8 +202,17 @@
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RendererFunction.h" />
     <ClInclude Include="ShaderSetup.h" />
+    <ClInclude Include="TextureSetUp.h" />
     <ClInclude Include="Window.h" />
     <ClInclude Include="XTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

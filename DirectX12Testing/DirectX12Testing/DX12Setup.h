@@ -69,7 +69,7 @@ public:
 	ComPtr<ID3D12DescriptorHeap> m_RTVDescriptorHeap = nullptr;
 	UINT m_RTVDescriptorSize;
 	UINT m_CurrentBackBufferIndex;
-
+	
 	// Synchronization objects
 	ComPtr<ID3D12Fence> m_Fence = nullptr;
 	uint64_t m_FenceValue = 0;

@@ -17,11 +17,6 @@ class DX12Renderer
 
 	D3D12_RECT m_scissorRect; // the area to draw in. pixels outside that area will not be drawn onto
 	
-	ID3D12Resource* m_vertexBuffer; // a default buffer in GPU memory that we will load vertex data for our triangle into
-
-	D3D12_VERTEX_BUFFER_VIEW m_vertexBufferView; // a structure containing a pointer to the vertex data in gpu memory
-											   // the total size of the buffer, and the size of each element (vertex)
-	//temp 
 public:
 	static DX12Renderer* GetRenderer();
 	//renderer function and update

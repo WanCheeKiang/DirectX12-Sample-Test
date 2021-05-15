@@ -1,13 +1,20 @@
 #include "ShaderSetup.h"
 
-void ShaderSetup::SetupVertexShader(ID3D12Device* device, ID3D12PipelineState* pipelineState, DX12Setup* setup)
+void ShaderSetup::SetupShader(ID3D12Device* device, ID3D12PipelineState* pipelineState, DX12Setup* setup, LPCWSTR vAssetName, LPCWSTR pAssetName, const char* vShaderModel, const char*  pShaderModel)
 {
+
+    
 #if defined(_DEBUG)
     // Enable better shader debugging with the graphics debugging tools.
     UINT compileFlags = D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
 #else
     UINT compileFlags = 0;
 #endif
+
+    ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(vAssetName).c_str(), nullptr, nullptr, "main", vShaderModel, compileFlags, 0, &vertexShader, nullptr));
+    // v this in set pixel shader function!!!! also write get set for blob(pshader&vshader)
+    ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(pAssetName).c_str(), nullptr, nullptr, "main", pShaderModel, compileFlags, 0, &pixelShader, nullptr));
+
 
     //temp!!!!!! need to modify to be flexible to use different inputlayout for different type of vertex shader //example: fullsail final project (dx11) 
     D3D12_INPUT_ELEMENT_DESC inputElementDescs[] =
@@ -17,7 +24,7 @@ void ShaderSetup::SetupVertexShader(ID3D12Device* device, ID3D12PipelineState* p
     };
 
 
-
+    //create PSO
     D3D12_GRAPHICS_PIPELINE_STATE_DESC psoDesc = {};
     psoDesc.InputLayout = { inputElementDescs, _countof(inputElementDescs) };
     psoDesc.pRootSignature  = rf.GetRootSignature().Get();
@@ -36,4 +43,9 @@ void ShaderSetup::SetupVertexShader(ID3D12Device* device, ID3D12PipelineState* p
     ThrowIfFailed(device->CreateGraphicsPipelineState(&psoDesc, IID_PPV_ARGS(&pipelineState)));
 
 
+}
+
+void ShaderSetup::CreateVertexBuffer()
+{
+    const UINT vertexBufferSize = 0;
 }

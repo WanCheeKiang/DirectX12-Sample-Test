@@ -69,6 +69,12 @@
     <ClCompile Include="ShaderSetup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MathLibrary\Vertex.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureSetUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="d3dx12.h">
@@ -149,5 +155,14 @@
     <ClInclude Include="LoadPipeline.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MathLibrary\Vertex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureSetUp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="VertexShader.hlsl" />
   </ItemGroup>
 </Project>

@@ -13,6 +13,12 @@
 #include "Transform.h"
 #define RANDOMFLOAT rand() / (float)RAND_MAX
 #define RANDOMDOUBLE rand() / (double)RAND_MAX
+
+namespace MathConstants
+{
+    constexpr float kEpsilon = 0.001f;
+}
+
 class MathLibrary
 {
     public:

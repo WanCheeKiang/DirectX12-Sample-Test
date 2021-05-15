@@ -5,6 +5,7 @@
 #include "DX12Helpers.h"
 #include"Window.h"
 
+
 #include <wrl.h>
 #include <combaseapi.h>
 
@@ -157,6 +158,34 @@ void RednererFunction::SetCommandList(ID3D12Device2* device, DX12Setup* setup)
 	ThrowIfFailed(device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, setup->m_CommandAllocators->Get(), m_PipelineState.Get(), IID_PPV_ARGS(&setup->m_CommandList)));
 
 }
+
+void RednererFunction::CreateVertexBuffer(ID3D12Device2* device, size_t vertSize, vector<FVertex>& vertices)
+{
+	const UINT vertexBufferSize = sizeof(vertices.data()); // 0 is temp //sizeof();
+
+	ThrowIfFailed(device->CreateCommittedResource(
+		&CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+		D3D12_HEAP_FLAG_NONE,
+		&CD3DX12_RESOURCE_DESC::Buffer(vertexBufferSize),
+		D3D12_RESOURCE_STATE_GENERIC_READ,
+		nullptr,
+		IID_PPV_ARGS(&m_VertexBuffer)));
+
+	// Copy the triangle data to the vertex buffer.
+	UINT8* pVertexDataBegin;
+	CD3DX12_RANGE readRange(0, 0);        // We do not intend to read from this resource on the CPU.
+	ThrowIfFailed(m_VertexBuffer->Map(0, &readRange, reinterpret_cast<void**>(&pVertexDataBegin)));
+	memcpy(pVertexDataBegin, vertices.data(), sizeof(vertices.data()));
+	m_VertexBuffer->Unmap(0, nullptr);
+
+	// Initialize the vertex buffer view.
+	m_vertexBufferView.BufferLocation = m_VertexBuffer->GetGPUVirtualAddress();
+	m_vertexBufferView.StrideInBytes = sizeof(FVertex);
+	m_vertexBufferView.SizeInBytes = vertexBufferSize;
+
+
+}
+
 
 
 

@@ -4,6 +4,8 @@
 #include<DirectXMath.h>
 #include<vector>
 #include<winnt.h>
+#include"MathLibrary/Vertex.h"
+
 #pragma comment (lib, "dxguid.lib")
 class RednererFunction
 {
@@ -37,6 +39,8 @@ class RednererFunction
 
 	bool m_ContentLoaded;
 	Window* m_wnd;
+
+	D3D12_VERTEX_BUFFER_VIEW m_vertexBufferView;
 public:
 	// Helper functions
 	// Transition a resource
@@ -77,4 +81,7 @@ public:
 	}
 	void SetCommandList(ID3D12Device2* device, DX12Setup* setup);
 
+	void CreateVertexBuffer(ID3D12Device2* device, size_t vertSize, std::vector<FVertex>& vertices);
+
+	
 };
