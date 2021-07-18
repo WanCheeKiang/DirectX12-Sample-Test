@@ -69,9 +69,6 @@
     <ClCompile Include="ShaderSetup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MathLibrary\Vertex.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="TextureSetUp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -149,20 +146,22 @@
     <ClInclude Include="DataType\FVertex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DataType\Camera.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="LoadPipeline.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MathLibrary\Vertex.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TextureSetUp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DataType\TempResource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\ShaderIncludes.hlsl" />
+    <ClInclude Include="scoped.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="VertexShader.hlsl" />
+    <FxCompile Include="Shader\VertexShader.hlsl" />
+    <FxCompile Include="Shader\PixelShader.hlsl" />
   </ItemGroup>
 </Project>

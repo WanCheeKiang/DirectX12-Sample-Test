@@ -1,5 +1,5 @@
 #include "Renderer.h"
-
+#include "RendererFunction.h"
 DX12Renderer* DX12Renderer::GetRenderer()
 {
 	static DX12Renderer renderer;

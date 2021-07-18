@@ -1,10 +1,12 @@
 #pragma once
 #include"DX12Setup.h"
 #include"Window.h"
+#include"DataType/FVertex.h"
+#include "File Reader/ModelFileImporter.h"
 #include<DirectXMath.h>
 #include<vector>
 #include<winnt.h>
-#include"MathLibrary/Vertex.h"
+
 
 #pragma comment (lib, "dxguid.lib")
 class RednererFunction
@@ -17,8 +19,8 @@ class RednererFunction
 	Microsoft::WRL::ComPtr<ID3D12Resource> m_IndexBuffer;
 	D3D12_INDEX_BUFFER_VIEW m_IndexBufferView;
 
-	// Depth buffer.
-	Microsoft::WRL::ComPtr<ID3D12Resource> m_DepthBuffer;
+	// Depth buffer, Depth Stencil View
+	Microsoft::WRL::ComPtr<ID3D12Resource> m_DSV;
 	// Descriptor heap for depth buffer.
 	Microsoft::WRL::ComPtr<ID3D12DescriptorHeap> m_DSVHeap;
 
@@ -28,8 +30,9 @@ class RednererFunction
 	// Pipeline state object.
 	Microsoft::WRL::ComPtr<ID3D12PipelineState> m_PipelineState = nullptr;
 
-	D3D12_VIEWPORT m_Viewport;
-	D3D12_RECT m_ScissorRect;
+	D3D12_VIEWPORT m_viewport; // area that output from rasterizer will be stretched to.
+
+	D3D12_RECT m_ScissorRect; // the area to draw in. pixels outside that area will not be drawn onto
 
 	float m_FoV;
 
@@ -68,7 +71,7 @@ public:
 	//temp function for update , will change it after
 	void OnUpdate(UpdateEventArgs& e);
 
-	HRESULT CreateRootSign(ID3D12Device2* device, ID3D12RootSignature* rootSignature);
+	void CreateRootSign(ComPtr<ID3D12Device2> device, ComPtr<ID3D12RootSignature> rootSignature);
 
 	Microsoft::WRL::ComPtr<ID3D12RootSignature> GetRootSignature()
 	{
@@ -79,9 +82,16 @@ public:
 	{
 		return m_PipelineState;
 	}
-	void SetCommandList(ID3D12Device2* device, DX12Setup* setup);
+	void SetCommandList(ComPtr<ID3D12Device2> device, DX12Setup* setup);
 
-	void CreateVertexBuffer(ID3D12Device2* device, size_t vertSize, std::vector<FVertex>& vertices);
+	void CreateVertexBuffer(ComPtr<ID3D12Device2> device, size_t vertSize, std::vector<FVertex::Vertex>& vertices);
 
+	void PopulateCommandList();
+	 
+	void CloseCommandList(Microsoft::WRL::ComPtr<ID3D12GraphicsCommandList2> commandList, Microsoft::WRL::ComPtr<ID3D12CommandQueue> commandQueue);
 	
+	void LoadAssetData(FileImport::Import::MeshImport& mesh);
+
+	void DrawTriangle();
+
 };

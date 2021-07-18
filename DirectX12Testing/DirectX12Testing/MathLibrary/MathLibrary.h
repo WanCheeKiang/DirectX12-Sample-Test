@@ -14,10 +14,10 @@
 #define RANDOMFLOAT rand() / (float)RAND_MAX
 #define RANDOMDOUBLE rand() / (double)RAND_MAX
 
-namespace MathConstants
-{
-    constexpr float kEpsilon = 0.001f;
-}
+//namespace MathConstants
+//{
+//    constexpr float kEpsilon = 0.001f;
+//}
 
 class MathLibrary
 {
@@ -113,7 +113,7 @@ class MathLibrary
                 {
 
 
-                        const float sq = sqrt(q);
+                        const float sq = sqrtf(q);
                         const float d  = 1 / (2 * a);
                         r1             = (-b + sq) * d;
                         r2             = (-b - sq) * d;

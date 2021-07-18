@@ -63,7 +63,7 @@ private:
 public:
 	ComPtr<ID3D12CommandQueue> m_CommandQueue = nullptr;
 	ComPtr<IDXGISwapChain4> m_SwapChain = nullptr;
-	ComPtr<ID3D12Resource> m_BackBuffers[m_NumFrames] = {nullptr};
+	ComPtr<ID3D12Resource> m_BackBuffers[m_NumFrames] = {nullptr}; //TODO back buffer and render target naming issue 
 	ComPtr<ID3D12GraphicsCommandList> m_CommandList = nullptr;
 	ComPtr<ID3D12CommandAllocator> m_CommandAllocators[m_NumFrames] = {nullptr};
 	ComPtr<ID3D12DescriptorHeap> m_RTVDescriptorHeap = nullptr;
@@ -115,6 +115,8 @@ public:
 	const ComPtr<ID3D12Device2>& GetDevice(void) const { return this->m_Device; }
 
 	void SetDevice(ComPtr<ID3D12Device2> device) { m_Device = device; }
+	void WaitForPreviousFrame();
+	
 
 
 };

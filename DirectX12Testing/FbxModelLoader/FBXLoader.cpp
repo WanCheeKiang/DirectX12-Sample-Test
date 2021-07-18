@@ -1,6 +1,7 @@
-
 #include "FBXLoader.h"
 #include"MathConverter.h"
+#include <string.h>
+
 using namespace std;
 using namespace MathConvert;
 
@@ -624,7 +625,7 @@ bool ImportFbxModel(const char * FileName, Mesh& model, JointData& jointdata)
 
 			file_path_t file_path;
 
-			strcpy(file_path.data(), file_name.c_str());
+			strcpy_s(file_path.data(), file_path.size() * sizeof(char),file_name.c_str());
 			model.textures.push_back(file_path);
 		}
 		// Get emissive property as above
@@ -636,7 +637,7 @@ bool ImportFbxModel(const char * FileName, Mesh& model, JointData& jointdata)
 
 			file_path_t file_path;
 
-			strcpy(file_path.data(), file_name.c_str());
+			strcpy_s(file_path.data(), file_path.size() * sizeof(char),file_name.c_str());
 			model.textures.push_back(file_path);
 		}
 		// ...
@@ -653,7 +654,7 @@ bool ImportFbxModel(const char * FileName, Mesh& model, JointData& jointdata)
 
 				file_path_t file_path;
 
-				strcpy(file_path.data(), file_name.c_str());
+				strcpy_s(file_path.data(),file_path.size()* sizeof(char),file_name.c_str());
 				model.textures.push_back(file_path);
 			}
 		}

@@ -6,7 +6,7 @@
 #include <crtdbg.h>  
 #include <string>
 #include<Windows.h>
-#include<fbxsdk.h>
+#include <fbxsdk.h>
 #include<vector>
 #include <array>
 

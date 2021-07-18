@@ -237,7 +237,7 @@ void DX12Setup::UpdateRenderTargetViews(ComPtr<ID3D12Device2> device, ComPtr<IDX
 
 		device->CreateRenderTargetView(backBuffer.Get(), nullptr, rtvHandle);
 
-		m_BackBuffers[i] = backBuffer;
+		m_BackBuffers[i] = backBuffer; 
 
 		rtvHandle.Offset(rtvDescriptorSize);
 	}
@@ -301,4 +301,27 @@ void DX12Setup::Flush(ComPtr<ID3D12CommandQueue> commandQueue, ComPtr<ID3D12Fenc
 {
 	uint64_t fenceValueForSignal = Signal(commandQueue, fence, fenceValue);
 	WaitForFenceValue(fence, fenceValueForSignal, fenceEvent);
+}
+
+void DX12Setup::WaitForPreviousFrame()
+{
+	// WAITING FOR THE FRAME TO COMPLETE BEFORE CONTINUING IS NOT BEST PRACTICE.
+	// This is code implemented as such for simplicity. The D3D12HelloFrameBuffering
+	// sample illustrates how to use fences for efficient resource usage and to
+	// maximize GPU utilization.
+
+	// Signal and increment the fence value.
+	const UINT64 fence = m_FenceValue;
+	ThrowIfFailed(m_CommandQueue->Signal(m_Fence.Get(), fence));
+	m_FenceValue++;
+
+	// Wait until the previous frame is finished.
+	if (m_Fence->GetCompletedValue() < fence)
+	{
+		ThrowIfFailed(m_Fence->SetEventOnCompletion(fence, m_FenceEvent));
+		WaitForSingleObject(m_FenceEvent, INFINITE);
+	}
+
+	m_CurrentBackBufferIndex = m_SwapChain->GetCurrentBackBufferIndex();
+	
 }

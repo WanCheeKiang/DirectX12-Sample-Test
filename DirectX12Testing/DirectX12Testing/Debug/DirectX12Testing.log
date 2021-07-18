@@ -1,7 +1,6 @@
 ﻿  RendererFunction.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(116,46): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\MathLibrary\MathLibrary.h(116,40): warning C4244: 'initializing': conversion from 'double' to 'const float', possible loss of data
-  TextureSetUp.cpp
-C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\TextureSetUp.cpp(56,38): warning C4244: '=': conversion from 'float' to 'UINT', possible loss of data
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\RendererFunction.cpp(187,10): warning C4101: 'hr': unreferenced local variable
+C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\DirectX12Testing\RendererFunction.cpp(306,10): warning C4101: 'hr': unreferenced local variable
+  ShaderSetup.cpp
   Generating Code...
   DirectX12Testing.vcxproj -> C:\Users\Kiang Wan Chee\Desktop\DirectX12-Sample-Test\DirectX12Testing\Debug\DirectX12Testing.exe

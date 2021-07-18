@@ -11,23 +11,34 @@ using namespace std;
 
 int main()
 {
-	std::string name;
-	getline(cin, name);
+	int filecount = 0;
+	cout << "How many Fbx file: ";
+	cin >> filecount;
 
-	Mesh model;
-	JointData jointdata;
-
-	string fbxName = name + ".fbx";
-	if (ImportFbxModel(fbxName.c_str(), model, jointdata))
+	for(int i = 0; i <= filecount; i++)
 	{
-		string meshName = name + ".bin";
-		string jointName = name + ".joint";
-		string skinMeshName = name + ".skinmesh";
+		std::string name;
+		cout << "Insert file name(DON'T have to insert file type '.fbx' only the file name): ";
+		getline(cin, name);
 
-		//FileWriter::WriteMeshBinFile(meshName.c_str(), &model);
-		FileWriter::WriteJointDataFile(jointName.c_str(), &jointdata);
-		FileWriter::WriteSkinMeshFile(skinMeshName.c_str(), &model);
+		Mesh model;
+		JointData jointdata;
+
+		string fbxName = name + ".fbx";
+		if (ImportFbxModel(fbxName.c_str(), model, jointdata))
+		{
+			string meshName = name + ".bin";
+			string jointName = name + ".joint";
+			string skinMeshName = name + ".skinmesh";
+
+			//FileWriter::WriteMeshBinFile(meshName.c_str(), &model);
+			FileWriter::WriteJointDataFile(jointName.c_str(), &jointdata);
+			FileWriter::WriteSkinMeshFile(skinMeshName.c_str(), &model);
+		}
 	}
+
+	cout << "Finish import fbx file to the system.";
+	
 }
 
 
